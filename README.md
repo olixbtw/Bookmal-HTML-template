@@ -1,11 +1,12 @@
-### General repo for all the projects
+### Bookmal website
 
+## Build Setup:
+# Install dependencies:
+npm install
 
-03 - List application for node course
+# Server with hot reload at http://localhost:8081/
+npm run dev
 
-02 - Bookmal page (webpack + js added)
-
-01 - Bookmal page (html + css only)
-
-
-00 - git_task - deleted
+# Output will be at dist/ folder
+npm run build
+```

@@ -1,0 +1,16 @@
+.bookmark-block {
+  display: inline-block;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/assets/images/ui/bookmark_big.svg");
+  transition: .2s all ease-in;
+  &:active{
+    opacity: 0.75;
+  }
+  &:hover {
+    background-image: url("/assets/images/ui/bookmark_active.svg");
+  }
+}

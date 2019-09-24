@@ -1,0 +1,67 @@
+@import "utils/fonts";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/reset";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 4.5em;
+}
+h2 {
+  font-size: 3.8em;
+}
+h3 {
+  font-size: 3em;
+}
+h4 {
+  font-size: 2.6em;
+}
+h5 {
+  font-size: 2em;
+}
+h6 {
+  font-size: 1.6em;
+}
+p {
+  font-size: 1.6em;
+}
+
+:root {
+  // font-family: "Lora", serif;
+  font-family: "ProximaNova", sans-serif;
+  line-height: 1.6;
+  
+  @include screen-sm {
+    font-size: 8px;
+  }
+}
+
+@import "elements/button";
+@import "elements/block_stats";
+@import "elements/bookmark";
+
+@import "elements/other";
+
+@import "modules/header";
+@import "modules/footer";
+@import "modules/hero";
+@import "modules/main_menu";
+@import "modules/section-one_article";
+@import "modules/section-three_articles";
+
+.scroller {
+  width: 10px;
+  height: 100vh;
+}
