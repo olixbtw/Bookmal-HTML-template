@@ -25,9 +25,9 @@ module.exports = {
     // module: `${PATHS.src}/your-module.js`, //еще одна точка входа
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[hash].js`,
+    filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
-    publicPath: (process.env.NODE_ENV === 'dev' ? '/' : './')
+    // publicPath: (process.env.NODE_ENV === 'development' ? '/' : './')
   },
   optimization: {
     splitChunks: {
@@ -78,7 +78,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: `${PATHS.assets}css/[name].css`,
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}images`, to: `${PATHS.assets}images` },

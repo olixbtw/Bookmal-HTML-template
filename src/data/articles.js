@@ -1,3 +1,22 @@
-const articlesList[
-  {}
+const articlesList = [
+  { title: 'Тварини Патріка Джорджа: врятуй їх усіх', category: 'КОРИСНІ СТАТТІ', date: '1 жовня, 2017', views: '980' },
+  { title: '"Любий щоденнику": ваш "настільний" психоаналітик', category: 'ПОРАДИ', date: '', views: '' },
+  { title: 'Бути собою разом із Туве Янссон: 5 диваків Долини мумі-тролів', category: 'ОГЛЯДИ', date: '', views: '' },
+  { title: 'Шість пригодницьких історій для літнього читання', category: 'НОВИНИ', date: '', views: '' },
+  { title: '', category: 'КОРИСНІ СТАТТІ', date: '', views: '' },
+  { title: '', category: 'ФІЛЬМИ', date: '', views: '' },
+  { title: '', category: 'ПОРАДИ', date: '', views: '' },
+  { title: '', category: 'ФІЛЬМИ', date: '', views: '' },
+  { title: '', category: 'ОГЛЯДИ', date: '', views: '' },
+  { title: 'Шість пригодницьких історій для літнього читання', category: 'ПОРАДИ', date: '', views: '' },
+  { title: '', category: 'ФІЛЬМИ', date: '', views: '' },
+  { title: '', category: 'КОРИСНІ СТАТТІ', date: '', views: '' },
+  { title: '', category: 'ОГЛЯДИ', date: '', views: '' },
+  { title: '', category: 'ФІЛЬМИ', date: '', views: '' },
+  { title: '', category: 'КОРИСНІ СТАТТІ', date: '', views: '' },
+  { title: '', category: 'ПОРАДИ', date: '', views: '' },
+  { title: '', category: 'ФІЛЬМИ', date: '', views: '' },
+  { title: 'Шість пригодницьких історій для літнього читання', category: 'ОГЛЯДИ', date: '', views: '' },
+  { title: '', category: 'ПОРАДИ', date: '', views: '' },
+  { title: 'Шість пригодницьких історій для літнього читання', category: 'ФІЛЬМИ', date: '', views: '' },
 ]
