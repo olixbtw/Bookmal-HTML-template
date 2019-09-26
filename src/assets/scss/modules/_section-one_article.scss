@@ -116,6 +116,9 @@ $offset-card: 25vw;
     width: 55%;
   }
   &-card {
+    display: flex;
+    flex-direction: column;
+
     padding: 3rem;
     background: white;
     border: 0.3rem solid $color-bg-light;
@@ -135,9 +138,11 @@ $offset-card: 25vw;
     }
   }
   &-block_stats {
+    order: -1;
   }
   &-text {
     margin: 1em 0;
+    font-size: 4rem;
   }
   &-bookmark {
     position: absolute;

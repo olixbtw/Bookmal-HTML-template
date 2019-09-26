@@ -42,10 +42,8 @@
     @include screen-m-xsm() {
       max-width: 45rem;
     }
-    margin-top: 1rem;
+    margin-top: 4rem;
     margin-bottom: 4rem;
-  }
-  &-column {
     position: relative;
   }
   &-category {
@@ -54,6 +52,8 @@
     color: $color-yellow;
     font-weight: 600;
     margin-bottom: 1.5rem;
+    position: absolute;
+    bottom: 100%;
   }
   &-image {
     width: 100%;
@@ -77,8 +77,14 @@
   &-text {
     margin: 0;
   }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
   &-block_stats {
     padding: 2rem 0;
+    order: -1;
     //   .block_stats-date {
     //     &::before {
     //       background-image: url("/assets/images/UI/calendar-grey.svg");
@@ -90,4 +96,7 @@
     //     }
     //   }
   }
+}
+.three_articles + .three_articles{
+  margin-top: -2rem;
 }
