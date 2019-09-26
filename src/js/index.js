@@ -1,5 +1,5 @@
-let articles = require('../data/articles')
-let structure = require('../data/structure')
+let articles = require('../_data/articles')
+let structure = require('../_data/structure')
 
 renderPage = require('./render/render')
 
