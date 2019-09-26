@@ -3,15 +3,20 @@
     background: $color-bg-light;
   }
   padding: 3rem 0 0;
-  margin: 6rem 0;
+  margin: 0;
 
   &-container {
     justify-content: space-between;
+
+    .three_articles--not_full & {
+      justify-content: space-around;
+    }
+
     @include screen-lg {
       justify-content: space-around;
       > * {
-        margin-right: 2rem;
-        margin-left: 2rem;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
       }
     }
     @extend %container;
@@ -37,6 +42,7 @@
     @include screen-m-xsm() {
       max-width: 45rem;
     }
+    margin-top: 1rem;
     margin-bottom: 4rem;
   }
   &-column {
