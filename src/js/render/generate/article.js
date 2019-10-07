@@ -1,3 +1,5 @@
+const generateDate = require('./date')
+
 module.exports = (className, params) => {
   return `
     <article class="${className}-content_block">
@@ -10,7 +12,7 @@ module.exports = (className, params) => {
           <div class="${className}-card">
             <h4 class="${className}-text">${params.title}</h4>
             <div class="${className}-block_stats block_stats">
-              <a href="#" class="block_stats-date">${params.date}</a>
+              <a href="#" class="block_stats-date">${generateDate(params.date)}</a>
               <a href="#" class="block_stats-views">${params.views}</a>
             </div>
             <div class="${className}-actions">

@@ -1,4 +1,4 @@
-getArticle = require('./generateArticle')
+getArticle = require('./article')
 
 
 module.exports = (sectionParams, articles) => {
