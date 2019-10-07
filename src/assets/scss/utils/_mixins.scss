@@ -72,15 +72,6 @@ $xsm:420px;
 %container {
   margin: 0 auto;
   width: 90%;
-  // @media (min-width: $screen-small) {
-  //   max-width: 900px;
-  // }
-  // @media (min-width: $screen-medium) {
-  //   max-width: 1300px;
-  // }
-  // @media (min-width: $screen-large) {
-  //   max-width: 1600px;
-  // }
   @include screen-m-sm() {
     max-width: 900px;
   }
@@ -90,4 +81,17 @@ $xsm:420px;
   @include screen-m-lg() {
     max-width: 1600px;
   }
+}
+
+.media-order {
+  @include screen-m-xsm{ display: block;}
+  @include screen-m-sm{ display: block;}
+  @include screen-m-md{ display: block;}
+  @include screen-m-lg{ display: block;}
+  @include screen-m-xlg{ display: block;}
+  @include screen-xlg{ display: block;}
+  @include screen-lg{ display: block;}
+  @include screen-md{ display: block;}
+  @include screen-sm{ display: block;}
+  @include screen-xsm{ display: block;}
 }

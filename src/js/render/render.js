@@ -1,6 +1,6 @@
 let baseElement = document.getElementById('idMain')
 
-getSection = require('./generate/section')
+const getSection = require('./generate/section')
 const defaultSection = { items: 3, class: 'three_articles', mod: [], header: '' }
 
 //render all items

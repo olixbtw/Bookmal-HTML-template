@@ -54,12 +54,12 @@ p {
 
 @import "elements/other";
 
-@import "modules/header";
-@import "modules/footer";
-@import "modules/hero";
-@import "modules/main_menu";
-@import "modules/section-one_article";
-@import "modules/section-three_articles";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/hero";
+@import "blocks/main_menu";
+@import "blocks/section-one_article";
+@import "blocks/section-three_articles";
 
 .scroller {
   width: 10px;
