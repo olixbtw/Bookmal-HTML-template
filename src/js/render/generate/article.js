@@ -8,7 +8,7 @@ module.exports = (className, params) => {
       </figure>
       <div class="${className}-column">
         <div class="${className}-shrink">
-          <header class="${className}-category">${params.category}</header>
+          <header class="${className}-theme">${params.theme}</header>
           <div class="${className}-card">
             <h4 class="${className}-text">${params.title}</h4>
             <div class="${className}-block_stats block_stats">

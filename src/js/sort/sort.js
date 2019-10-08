@@ -1,4 +1,3 @@
-
 const sortByView = (articles) => {
   let arr = [...articles]
   const compareFn = (b, a) => parseInt(a.views) - parseInt(b.views)

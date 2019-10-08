@@ -24,7 +24,7 @@ $offset-card: 25vw;
       &-content_block {
         direction: rtl;
       }
-      &-category {
+      &-theme {
         position: static;
         text-align: left;
       }
@@ -47,7 +47,7 @@ $offset-card: 25vw;
   }
   .one_article--right {
     .one_article {
-      &-category {
+      &-theme {
         position: static;
         text-align: right;
       }
@@ -71,7 +71,7 @@ $offset-card: 25vw;
     position: relative;
   }
 
-  &-category {
+  &-theme {
     text-transform: uppercase;
     color: $color-yellow;
     font-weight: 600;
