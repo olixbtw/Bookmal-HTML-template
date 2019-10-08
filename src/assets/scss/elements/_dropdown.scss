@@ -9,16 +9,16 @@ $boradius: 2rem;
   border-radius: $boradius;
   background: $color-yellow;
 }
-
 .dropdown {
   font-size: 1.6rem;
   font-family: "ProximaNova", sans-serif;
   font-weight: 600;
+  position: relative;
   &-placeholder {
     @extend %mWidth;
     @extend %buttonLike;
     position: relative;
-    padding: .75rem 4.5rem .75rem 2.5rem;
+    padding: 0.75rem 4.5rem 0.75rem 2.5rem;
     display: block;
     max-width: 20rem;
 
@@ -42,7 +42,7 @@ $boradius: 2rem;
   &-list {
     @extend %buttonLike;
     left: 0;
-    @include screen-md{
+    @include screen-md {
       left: 50%;
       transform: translateX(-50%);
     }
@@ -67,12 +67,13 @@ $boradius: 2rem;
       max-height: 15rem;
     }
   }
-  position: relative;
   &-item {
     @extend %mWidth;
     transition: all 0.15s ease-in-out;
     opacity: 0.7;
     order: 1;
+    padding: 0.1rem 1rem;
+    cursor: pointer;
     &.active {
       opacity: 0.8;
       text-decoration: underline;
@@ -80,10 +81,6 @@ $boradius: 2rem;
     }
     &:hover {
       opacity: 1;
-    }
-    padding: 0.1rem 1rem;
-    cursor: pointer;
-    &:hover {
       text-decoration: underline;
     }
   }
