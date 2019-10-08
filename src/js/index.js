@@ -10,9 +10,13 @@ const addClick = (func, elem) => document.getElementById(elem).addEventListener(
 
 window.onload = () => {
   render.renderPage(articles, structure)
-  addClick(sort.display.view, 'sortByViews')
-  addClick(sort.display.date, 'sortByDate')
+  addClick(displaySortedPage.view, 'sortByViews')
+  addClick(displaySortedPage.date, 'sortByDate')
+
   addClick(dropdown, 'categoryFilter')
 }
 
-
+const displaySortedPage = {
+  view: () => { if (sort.toggleActiveButton()) render.renderPage(sort.view(articles), structure) },
+  date: () => { if (sort.toggleActiveButton()) render.renderPage(sort.date(articles), structure) },
+}
