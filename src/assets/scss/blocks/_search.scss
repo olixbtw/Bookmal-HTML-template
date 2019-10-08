@@ -1,0 +1,13 @@
+.search{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-bg-light;
+  z-index: 99;
+}
+
+.main_header{
+  position: fixed;
+}
