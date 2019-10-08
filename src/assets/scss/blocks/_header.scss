@@ -25,17 +25,27 @@
     @include screen-sm {
       height: 4rem;
       border: 0px solid transparent;
+      position: static;
+      transform: initial;
+    }
+
+    @include screen-lg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
     }
   }
 
   &-dropdown {
+    order: 0;
     margin: 0;
     margin-right: auto;
     margin-left: 2rem;
 
-    @include screen-lg {
-      margin-left: auto;
-    }
+    // @include screen-lg {
+    //   margin-right: 0;
+    // }
   } // &-dropdown
 
   &-navigation {
@@ -73,6 +83,9 @@
     }
   }
   &-header_icon {
+    // @include screen-lg {
+    //   order: 5;
+    // }
     &:first-of-type {
       border-left: 0.2rem solid $color-bg-light;
       @include screen-sm {

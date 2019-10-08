@@ -45,6 +45,10 @@
     @include screen-sm() {
       width: unset;
     }
+    @include screen-xsm() {
+      min-width: 20rem;
+    }
+
     margin-top: 4rem;
     margin-bottom: 4rem;
     position: relative;
