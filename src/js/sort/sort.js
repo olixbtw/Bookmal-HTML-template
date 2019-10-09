@@ -26,10 +26,12 @@ const sortByDate = (articles) => {
 }
 
 const toggleActiveButton = () => {
+  console.log('123')
   if (!event.target.classList.contains('active')) {
     for (let i = 0; i < event.target.parentElement.children.length; i++)
       event.target.parentElement.children[i].classList.remove('active')
 
+    event.target.classList.add('active')
     return event.target.innerText
   }
   else return false

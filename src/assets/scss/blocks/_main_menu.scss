@@ -3,13 +3,19 @@
   top: 0;
   left: 0;
   height: 100vh;
-  padding: 10rem 1rem 2rem;
   background: $color-bg-white;
   z-index: 999;
   border-right: 0.2rem solid $color-bg-light;
+  transition: padding 0.25s ease-out;
+  padding: 1rem;
+  @include screen-m-sm {
+    padding: 9rem 1rem 2rem;
+    &.scroll {
+      padding-top: 1rem;
+    }
+  }
   @include screen-sm {
     border: 0px solid;
-    padding: 1rem;
     position: absolute;
     height: unset;
     height: auto;

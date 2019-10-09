@@ -2,6 +2,7 @@ let baseElement = document.getElementById('idMain')
 
 const defaultSectionStructure = { items: 3, class: 'three_articles', mod: [], header: '' }
 const getSection = require('./generate/section')
+const generateSorter = require('./generate/sorter')
 
 //render all items
 const renderPage = (articlesArr, sections) => {
@@ -20,13 +21,16 @@ const renderPage = (articlesArr, sections) => {
     }
 
     // case if there is less arrticles left than is in predefined section
-    if (sectionArticles.length)
+    if (section.class === 'hero')
+      document.getElementById('heroArea').innerHTML = getSection(section, sectionArticles)
+    else if (sectionArticles.length)
       baseElement.innerHTML += getSection(section, sectionArticles)
+
   });
 
   //add this logic to "View More"
   // case if there is more arrticles than is in predefined structure
-  
+
   // while (articles.length > 0) {
   //   let sectionArticles = [];
   //   for (let i = 0; i < 3; i++) {

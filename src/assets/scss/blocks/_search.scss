@@ -138,6 +138,14 @@
   }
 }
 
+.search.open ~ .main_menu {
+  @include screen-m-sm {
+    &.scroll {
+      padding-top: 9rem;
+    }
+  }
+}
+
 .search.open ~ .main_menu .burger {
   position: fixed;
 }

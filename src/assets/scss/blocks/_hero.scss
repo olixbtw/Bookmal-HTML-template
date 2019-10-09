@@ -2,9 +2,6 @@
   display: flex;
   position: relative;
   color: $color-bg-white;
-  // padding: 15rem 2rem;
-  // min-height: 45rem;
-
   padding: 10rem 2rem 6rem;
   min-height: 59rem;
 
@@ -85,8 +82,7 @@
 
 @include screen-sm {
   .hero {
-    min-height: auto;
-    min-height: unset;
+    min-height: 30vh;
     padding-bottom: 2rem;
     padding-top: 7rem;
     &-text {

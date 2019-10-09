@@ -1,6 +1,7 @@
 const articlesList = [
+  { title: 'Тварини Патріка Джорджа: врятуй їх усіх',                         category:'teens',   theme: 'КОРИСНІ СТАТТІ',   date: [2021, 10, 1],     views: 1980,  img:{src:'bearBears.jpg',alt:'bears'}},
   { title: 'Бути собою разом із Туве Янссон: 5 диваків Долини мумі-тролів',   category:'kids',    theme: 'КОРИСНІ СТАТТІ',   date: [2017, 10, 1],     views: 980,   img:{src:'ravlik.jpg',alt:'Ravlik'}},
-  { title: 'Тварини Патріка Джорджа: врятуй їх усіх',                         category:'kids',    theme: 'ПОРАДИ',           date: [2018, 10, 2],     views: 1001,   img:{src:'Book.png',alt:'Book'}},
+  { title: 'Тварини Патріка Джорджа: врятуй їх усіх',                         category:'kids',    theme: 'ПОРАДИ',           date: [2018, 10, 2],     views: 1001,  img:{src:'Book.png',alt:'Book'}},
   { title: 'Бути собою разом із Туве Янссон: 5 диваків Долини мумі-тролів',   category:'kids',    theme: 'ОГЛЯДИ',           date: [2017, 10, 3],     views: 24,    img:{src:'Knowledge.png',alt:'Book in a city'}},
   { title: 'Шість пригодницьких історій для літнього читання',                category:'kids',    theme: 'НОВИНИ',           date: [2017, 10, 4],     views: 90,    img:{src:'photo.png',alt:'Photo girl'}},
   { title: '"Любий щоденнику": ваш "настільний" психоаналітик',               category:'kids',    theme: 'КОРИСНІ СТАТТІ',   date: [2020, 11, 1],     views: 540,   img:{src:'cute-brain-cartoon2.jpeg',alt:'Cute brain'}},

@@ -48,6 +48,10 @@ p {
   }
 }
 
+main section:first-child{
+  margin-top: 0;
+}
+
 @import "elements/button";
 @import "elements/block_stats";
 @import "elements/bookmark";
