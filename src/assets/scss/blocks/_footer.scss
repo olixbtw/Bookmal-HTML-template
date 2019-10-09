@@ -1,10 +1,12 @@
 .main_footer {
+  //styling
   margin-top: 10rem;
   background: $color-bg-light;
   color: $color-text-grey;
-  padding: 4rem 0;
+  padding: 4rem 0 1rem;
   position: relative;
   box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.05);
+
   &-show_more {
     position: absolute;
     bottom: 100%;
@@ -40,7 +42,7 @@
   &-subscribe,
   &-copy,
   &-social {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
   &-copy {
     font-size: 1.4rem;
@@ -48,20 +50,22 @@
   }
 
   //layout:
-
   &-container {
     @extend %container;
   }
   &-subscribe,
   &-copy,
   &-social {
-    max-width: 40rem;
+    @include screen-m-md {
+      max-width: 43rem;
+    }
   }
   &-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     > * {
+      //not BEM  
       margin-right: 5rem;
       &:last-child {
         margin-right: 0;
@@ -126,6 +130,7 @@
 }
 
 .subscribe {
+  //not BEM
   margin-top: 3rem;
   @include screen-md {
     margin: 2rem 0;
@@ -161,6 +166,7 @@
 }
 
 .socials {
+  //not BEM
   margin-left: -2rem;
   img {
     transition: 0.15s all ease-in-out;
