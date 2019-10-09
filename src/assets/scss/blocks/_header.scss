@@ -86,6 +86,11 @@
     // @include screen-lg {
     //   order: 5;
     // }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
     &:first-of-type {
       border-left: 0.2rem solid $color-bg-light;
       @include screen-sm {

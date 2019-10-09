@@ -9,6 +9,7 @@ const renderPage = (articlesArr, sections) => {
   baseElement.innerHTML = ''
 
   //render all sections from structure
+  //check number of articles in case there are less than needed left
   sections.forEach(section => {
     let sectionArticles = [];
     for (let i = 0; i < section.items; i++) {
@@ -25,18 +26,19 @@ const renderPage = (articlesArr, sections) => {
 
   //add this logic to "View More"
   // case if there is more arrticles than is in predefined structure
-  while (articles.length > 0) {
-    let sectionArticles = [];
-    for (let i = 0; i < 3; i++) {
-      if (articles[0]) {
-        sectionArticles.push(articles[0])
-        articles.shift()
-      }
-    }
+  
+  // while (articles.length > 0) {
+  //   let sectionArticles = [];
+  //   for (let i = 0; i < 3; i++) {
+  //     if (articles[0]) {
+  //       sectionArticles.push(articles[0])
+  //       articles.shift()
+  //     }
+  //   }
 
-    if (sectionArticles.length)
-      baseElement.innerHTML += getSection(defaultSectionStructure, sectionArticles)
-  }
+  //   if (sectionArticles.length)
+  //     baseElement.innerHTML += getSection(defaultSectionStructure, sectionArticles)
+  // }
 }
 
 module.exports = { renderPage }

@@ -10,8 +10,8 @@ module.exports = (sectionParams, articles) => {
       generatedModifier += ` ${sectionParams.class}--${mod}`
     });
 
-  if (sectionParams.items !== articles.length)
-    generatedModifier += ` ${sectionParams.class}--not_full`
+  // if (sectionParams.items !== articles.length)
+  //   generatedModifier += ` ${sectionParams.class}--not_full`
 
   if (sectionParams.header) {
     header += `<header class="${sectionParams.class}-section_header">${sectionParams.header}</header>`

@@ -3,11 +3,6 @@
   pointer-events: none;
   transition: 0.4s all ease-out;
   transform: translateY(-50%);
-  &.open {
-    opacity: 1;
-    pointer-events: all;
-    transform: translateY(0);
-  }
   position: fixed;
   top: 0;
   left: 0;
@@ -47,28 +42,45 @@
   &-input {
     width: 100%;
     border: 0px solid;
-    border-bottom: 0.3rem solid $color-yellow;
+    border-bottom: 0.3rem solid $color-text-dark;
     padding: 2rem 3rem;
     margin-bottom: 1em;
     font-size: 1.5em;
     display: block;
     transition: 0.2s all ease-in-out;
     max-width: 70rem;
+
     &:focus,
     &:active {
       outline: none;
       box-shadow: 0.15rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+      border-color: $color-yellow;
     }
   }
   &-result_list {
     list-style: none;
-    margin: 0;
-    margin-top: 2rem;
+    margin: 2rem 0 0;
     padding: 0;
+    padding-left: 1rem;
   }
   &-result_item {
-    display: flex;
     margin-bottom: 1rem;
+    position: relative;
+
+    @include screen-xsm() {
+      padding-left: 2rem;
+      &::before {
+        content: "";
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background: $color-text-grey;
+        position: absolute;
+        top: 1.25rem;
+        left: 0;
+        border-radius: 50%;
+      }
+    }
     &:hover {
       .search-result_remove {
         opacity: 1;
@@ -78,36 +90,53 @@
     }
   }
   &-result_link {
-    width: 10rem;
-    height: 10rem;
-    flex-shrink: 0;
-    margin-right: 2rem;
+    display: flex;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    color: $color-text-dark;
+    text-decoration: none;
+    &:hover {
+      opacity: 1;
+    }
   }
   &-result_image {
+    @include screen-xsm() {
+      display: none;
+    }
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    // flex-shrink: 1;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    object-fit: cover;
   }
   &-result_text {
     align-self: center;
     margin-right: 2rem;
   }
-  &-result_remove {
-    transition: all 0.2s linear;
-    opacity: 0;
-    pointer-events: none;
-    position: relative;
-    left: 2rem;
-    margin-left: auto;
-    margin-right: 0;
+  // &-result_remove {
+  //   transition: all 0.2s linear;
+  //   opacity: 0;
+  //   pointer-events: none;
+  //   position: relative;
+  //   left: 2rem;
+  //   margin-left: auto;
+  //   margin-right: 0;
+  // }
+}
+
+.search.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.search.open ~ .main_header {
+  @include screen-m-sm {
+    position: fixed;
   }
 }
 
-.main_header {
-  position: fixed;
-}
-
-.main_menu .burger {
+.search.open ~ .main_menu .burger {
   position: fixed;
 }
