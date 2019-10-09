@@ -1,0 +1,36 @@
+.show_more {
+  //not BEM
+  display: none;
+  &.thereIsMore{
+    display: block;
+  }
+  padding: 4rem 0;
+  margin: 0 auto;
+  // width:min-content;
+  font-size: 2rem;
+  color: $color-text-dark;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  img {
+    position: relative;
+    margin-right: 0.5rem;
+    margin-bottom: -0.5rem;
+    transform: rotate3d(0, 0, 1, 45deg);
+    transition: 0.7s all ease-in-out;
+    will-change: auto;
+  }
+  &:hover {
+    img {
+      transform: rotate3d(0, 0, 1, 575deg);
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}

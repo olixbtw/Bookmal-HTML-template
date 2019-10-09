@@ -1,4 +1,6 @@
 module.exports = {
   filter: false,
-  sort: false
+  sort: false,
+  currentArticles: [],//USE IT
+  articlesLeft: []
 }

@@ -1,44 +1,12 @@
 .main_footer {
   //styling
-  margin-top: 10rem;
   background: $color-bg-light;
   color: $color-text-grey;
   padding: 4rem 0 1rem;
   position: relative;
   box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.05);
 
-  &-show_more {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-bottom: 4rem;
-    font-size: 2rem;
-    color: $color-text-dark;
-    cursor: pointer;
-    white-space: nowrap;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    img {
-      position: relative;
-      margin-right: 0.5rem;
-      margin-bottom: -0.5rem;
-      transform: rotate3d(0, 0, 1, 45deg);
-      transition: 0.7s all ease-in-out;
-      will-change: auto;
-    }
-    &:hover {
-      img {
-        transform: rotate3d(0, 0, 1, 575deg);
-      }
-      a {
-        text-decoration: underline;
-      }
-    }
-  }
+ 
   &-subscribe,
   &-copy,
   &-social {
@@ -65,7 +33,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     > * {
-      //not BEM  
+      //not BEM
       margin-right: 5rem;
       &:last-child {
         margin-right: 0;
