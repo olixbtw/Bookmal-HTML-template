@@ -17,9 +17,17 @@ const closeSearch = () => {
   search.classList.remove('open')
 }
 
-const addItem = () => {
-  searchList += `
-    <li>
+const generate = (item) => {
+  if (item) return `
+    <li class="search-result_item">
+      <a href="${item.link}" class="search-result_link">
+        <img src="./assets/images/common/${item.img.src}" alt="${item.img.src}" class="search-result_image">
+        <span class="search-result_text">${item.title}</span>
+      </a>
+    </li>
+    `
+  else return `
+    <li class="search-result_item">
       <span class="search-result_text">Список пустий</span>
     </li>
   `
@@ -34,28 +42,18 @@ const initiateSearch = debounce((event) => {
     )
 
     foundArticles.forEach(el => {
-      searchList.innerHTML += `
-      <li class="search-result_item">
-        <a href="${el.link}" class="search-result_link">
-          <img src="./assets/images/common/${el.img.src}" alt="${el.img.src}" class="search-result_image">
-          <span class="search-result_text">${el.title}</span>
-        </a>
-      </li>
-      `
+      searchList.innerHTML += generate(el)
     });
 
     if (foundArticles.length === 0)
-      searchList.innerHTML += `
-        <li class="search-result_item">
-          <span class="search-result_text">Список пустий</span>
-        </li>
-      `
+      searchList.innerHTML += generate(false)
   }
 }, 500)
 
 searchInput.addEventListener('input', initiateSearch)
 closeBtn.addEventListener('click', closeSearch)
-document.getElementsByClassName('main_header-header_icon--search')[0].addEventListener('click', openSearch)
+document.getElementsByClassName('main_header-header_icon--search')[0]
+  .addEventListener('click', openSearch)
 
 
 

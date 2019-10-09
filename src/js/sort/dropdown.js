@@ -1,6 +1,13 @@
+// const dropdown = async () => {
 const dropdown = () => {
   if (event.target.classList.contains('dropdown-item')) {
     let dropdownBlock = event.target.parentElement.parentElement;
+
+    if (dropdownBlock.getElementsByClassName('dropdown-placeholder')[0].innerText === event.target.innerText) {
+      dropdownBlock.classList.remove('open')
+      // throw 'you are already here'
+      return false
+    }
 
     dropdownBlock.getElementsByClassName('dropdown-placeholder')[0].innerText = event.target.innerText
 
@@ -11,17 +18,21 @@ const dropdown = () => {
     for (let i = 0; i < items.length; i++)
       items[i].classList.remove('active')
     event.target.classList.add('active')
-    //  - change active item
-    // !other actions
+
+    return event.target.innerText
   }
 
   if (event.target.classList.contains('dropdown-placeholder')) {
     let dropdownBlock = event.target.parentElement;
     if (!dropdownBlock.classList.contains('open'))
       dropdownBlock.classList.add('open')
-    // !other actions
+
+    // throw 'no action here';
+    return false
   }
 
+  // throw 'no action here';
+  return false
 }
 
 module.exports = dropdown

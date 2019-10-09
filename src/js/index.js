@@ -2,21 +2,29 @@ import articles from '../_data/articles'
 import structure from '../_data/structure'
 import sort from './sort/sort'
 import render from './render/render'
-import dropdown from './dropdown'
 import './resultWindow'
+import state from './STORE'
+import filter from './sort/filter'
 
 const addClick = (func, elem) => document.getElementById(elem).addEventListener('click', func)
 
-window.onload = () => {
-  render.renderPage(articles, structure)
-  addClick(displaySortedPage.view, 'sortByViews')
-  addClick(displaySortedPage.date, 'sortByDate')
-
-  addClick(dropdown, 'categoryFilter')
+const drawPage = () => {
+  render.renderPage(
+    filter.apply(
+      sort.apply(articles, state.sort), state.filter)
+    , structure)
 }
 
+window.onload = () => {
+  drawPage()
 
-const displaySortedPage = {
-  view: () => { if (sort.toggleActiveButton()) render.renderPage(sort.view(articles), structure) },
-  date: () => { if (sort.toggleActiveButton()) render.renderPage(sort.date(articles), structure) },
+  addClick(() => {
+    state.sort = sort.click()
+    if (state.sort) drawPage()
+  }, 'sortingFlag')
+
+  addClick(() => {
+    state.filter = filter.click()
+    if (state.filter) drawPage()
+  }, 'filterFlag')
 }

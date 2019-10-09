@@ -1,3 +1,16 @@
+const chooseSort = (arr, key) => {
+  switch (key) {
+    case 'Популярністю':
+      return sortByView(arr)
+
+    case 'Новизною':
+      return sortByDate(arr)
+
+    default:
+      return arr
+  }
+}
+
 const sortByView = (articles) => {
   let arr = [...articles]
   const compareFn = (b, a) => parseInt(a.views) - parseInt(b.views)
@@ -17,15 +30,12 @@ const toggleActiveButton = () => {
     for (let i = 0; i < event.target.parentElement.children.length; i++)
       event.target.parentElement.children[i].classList.remove('active')
 
-    event.target.classList.add('active')
-    return true
+    return event.target.innerText
   }
   else return false
 }
 
-
 module.exports = {
-  view: sortByView,
-  date: sortByDate,
-  toggleActiveButton
+  apply: chooseSort,
+  click: toggleActiveButton
 }
