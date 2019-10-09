@@ -21,7 +21,7 @@ window.onload = () => {
 }
 
 const openSearch = () => {
-  document.getElementById('search').classList.add('open')
+  document.getElementById('search').classList.toggle('open')
 }
 
 document.getElementsByClassName('search-close')[0].addEventListener('click', () => document.getElementById('search').classList.remove('open'))
