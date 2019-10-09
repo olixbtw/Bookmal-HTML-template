@@ -7,6 +7,7 @@ import sort from './sort/sort'
 import render from './render/render'
 import state from './STORE'
 import filter from './sort/filter'
+import theme from './theme'
 
 const addClick = (func, elem) => document.getElementById(elem).addEventListener('click', func)
 
@@ -25,11 +26,14 @@ window.onload = () => {
   addClick(() => {
     state.sort = sort.click()
     if (state.sort) drawPage()
+    if (state.sort) console.log('sort')
   }, 'sortingFlag')
 
   addClick(() => {
     state.filter = filter.click()
     if (state.filter) drawPage()
+    if (state.filter) theme.change(state.filter)
+    if (state.filter) console.log('filter')
   }, 'filterFlag')
 
   window.addEventListener('scroll', toggleMainMenuScrolled)
