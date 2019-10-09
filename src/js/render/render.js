@@ -1,25 +1,24 @@
 let baseElement = document.getElementById('idMain')
 
+const defaultSectionStructure = { items: 3, class: 'three_articles', mod: [], header: '' }
 const getSection = require('./generate/section')
-const defaultSection = { items: 3, class: 'three_articles', mod: [], header: '' }
 
 //render all items
 const renderPage = (articlesArr, sections) => {
   let articles = [...articlesArr]
   baseElement.innerHTML = ''
-  let articleCount = 0;
 
-  //render all basic sections
+  //render all sections from structure
   sections.forEach(section => {
     let sectionArticles = [];
-    // case if there is less arrticles than is in predefined structure
-    for (let i = articleCount; i < articleCount + section.items; i++) {
+    for (let i = 0; i < section.items; i++) {
       if (articles[0]) {
         sectionArticles.push(articles[0])
         articles.shift()
       }
     }
 
+    // case if there is less arrticles left than is in predefined section
     if (sectionArticles.length)
       baseElement.innerHTML += getSection(section, sectionArticles)
   });
@@ -36,10 +35,9 @@ const renderPage = (articlesArr, sections) => {
     }
 
     if (sectionArticles.length)
-      baseElement.innerHTML += getSection(defaultSection, sectionArticles)
+      baseElement.innerHTML += getSection(defaultSectionStructure, sectionArticles)
   }
 }
 
-module.exports = {
-  renderPage
-}
+module.exports = { renderPage }
+
