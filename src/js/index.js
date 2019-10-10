@@ -45,4 +45,4 @@ const toggleMainMenuScrolled = debounce((event) => {
     menuElem.classList.add('scroll')
   else
     menuElem.classList.remove('scroll')
-}, 100)
+}, 150, { maxWait: 3000 })

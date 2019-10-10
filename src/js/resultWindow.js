@@ -48,7 +48,7 @@ const initiateSearch = debounce((event) => {
     if (foundArticles.length === 0)
       searchList.innerHTML += generate(false)
   }
-}, 500)
+}, 500, { maxWait: 2000 })
 
 searchInput.addEventListener('input', initiateSearch)
 closeBtn.addEventListener('click', closeSearch)
