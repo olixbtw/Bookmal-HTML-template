@@ -12,6 +12,7 @@ import theme from './theme'
 const addClick = (func, elem) => document.getElementById(elem).addEventListener('click', func)
 
 const drawPage = () => {
+  theme.change(state.filter)
   render.renderPage(
     filter.apply(
       sort.apply(articles, state.sort), state.filter)
@@ -23,19 +24,16 @@ const drawPage = () => {
 window.onload = () => {
   drawPage()
 
-  addClick(render.addArticles,'showMore')
+  addClick(render.addArticles, 'showMore')
 
   addClick(() => {
     state.sort = sort.click()
     if (state.sort) drawPage()
-    // if (state.sort) console.log('sort')
   }, 'sortingFlag')
 
   addClick(() => {
     state.filter = filter.click()
     if (state.filter) drawPage()
-    // if (state.filter) theme.change(state.filter)
-    // if (state.filter) console.log('filter')
   }, 'filterFlag')
 
   window.addEventListener('scroll', toggleMainMenuScrolled)
@@ -43,8 +41,14 @@ window.onload = () => {
 
 const toggleMainMenuScrolled = debounce((event) => {
   let menuElem = document.getElementsByClassName('main_menu')[0]
-  if (window.pageYOffset > 50)
-    menuElem.classList.add('scroll')
-  else
-    menuElem.classList.remove('scroll')
+  let topArrow = document.getElementById('toTop')
+
+  window.pageYOffset > 50
+    ? menuElem.classList.add('scroll')
+    : menuElem.classList.remove('scroll')
+
+  window.pageYOffset > window.innerHeight
+    ? topArrow.classList.add('scroll')
+    : topArrow.classList.remove('scroll')
+
 }, 150, { maxWait: 3000 })
