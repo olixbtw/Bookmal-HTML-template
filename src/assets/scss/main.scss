@@ -44,30 +44,32 @@ p {
   line-height: 1.6;
   
   @include screen-sm {
-    font-size: 8px;
+    font-size: 8.5px;
   }
 }
 
 main section:first-child{
   margin-top: 0;
 }
-
+.container {
+  @extend %container;
+}
 @import "elements/button";
 @import "elements/block_stats";
 @import "elements/bookmark";
 @import "elements/dropdown";
 
 
-@import "elements/other";
 
-@import "blocks/header";
-@import "blocks/footer";
-@import "blocks/hero";
 @import "blocks/main_menu";
+@import "blocks/header";
+@import "blocks/search";
+@import "blocks/hero";
+@import "blocks/sorting";
 @import "blocks/section-one_article";
 @import "blocks/section-three_articles";
-@import "blocks/search";
 @import "blocks/show_more";
+@import "blocks/footer";
 
 .scroller {
   width: 10px;

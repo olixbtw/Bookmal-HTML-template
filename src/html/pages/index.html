@@ -14,39 +14,11 @@
     <div class="search" id="search">
       <div class="search-container">
         <button class="search-close">
-          <svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>close</title>
-            <desc>Created with sketchtool.</desc>
-            <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Bokmal-Home_for-all_open-Menu_V2" transform="translate(-18.000000, -82.000000)">
-                <rect fill="#FFFFFF" x="0" y="0" width="1366" height="3501"></rect>
-                <rect id="Rectangle-8" fill-opacity="0.300000012" fill="#000000" x="0" y="49" width="1366"
-                  height="3489">
-                </rect>
-                <g id="Menu_All_inner_open" transform="translate(-1.000000, 47.000000)">
-                  <g>
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="3" width="579" height="3303"></rect>
-                    <g id="x" transform="translate(19.000000, 35.000000)" stroke="#2B292D" stroke-linecap="round"
-                      stroke-linejoin="round" stroke-width="2">
-                      <g id="Shape">
-                        <g transform="translate(2.000000, 2.000000)">
-                          <path d="M15,0 L0,15"></path>
-                          <path d="M0,0 L15,15"></path>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
+          <img src="assets/images/UI/close.svg" alt="close icon">
         </button>
         <h1 class="search-header">Пошук</h1>
         <input type="text" class="search-input">
-        <ul class="search-result_list">
-
-        </ul>
+        <ul class="search-result_list"></ul>
       </div>
     </div>
 
@@ -80,64 +52,8 @@
     <nav class="main_menu">
 
       <label for="mainMenuActivator" class="main_menu-toggler">
-        <!-- <img class="burger" src="assets/images/UI/burger.svg" alt="burger icon">
-        <img class="close" src="assets/images/UI/close.svg" alt="close icon"> -->
-        <div class="burger">
-          <svg width="24px" height="19px" viewBox="0 0 24 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>93F5B7CF-E456-4568-A656-50A39D780798</title>
-            <desc>Created with sketchtool.</desc>
-            <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Bokmal_rubric_for-all-V2" transform="translate(-18.000000, -82.000000)">
-                <rect fill="#FFFFFF" x="0" y="0" width="1366" height="2989"></rect>
-                <g id="Menu_All_long" transform="translate(0.000000, 50.000000)">
-                  <g>
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="1" width="54" height="3480"></rect>
-                    <g id="burger-black_all" transform="translate(20.000000, 33.000000)" stroke="#2B292D"
-                      stroke-linecap="round" stroke-width="2">
-                      <g id="burger">
-                        <g>
-                          <path d="M0,1 L18.9706526,1" id="Path-2"></path>
-                          <path d="M0,6 L16.128439,6" id="Path-2-Copy"></path>
-                          <path d="M0,11 L19.9144287,11" id="Path-2-Copy-2"></path>
-                          <path d="M0,16 L15.191553,16" id="Path-2-Copy-3"></path>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div class="close">
-          <svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>remove</title>
-            <desc>Created with sketchtool.</desc>
-            <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Bokmal-Home_for-all_open-Menu_V2" transform="translate(-18.000000, -82.000000)">
-                <rect fill="#FFFFFF" x="0" y="0" width="1366" height="3501"></rect>
-                <rect id="Rectangle-8" fill-opacity="0.300000012" fill="#000000" x="0" y="49" width="1366"
-                  height="3489"></rect>
-                <g id="Menu_All_inner_open" transform="translate(-1.000000, 47.000000)">
-                  <g>
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="3" width="579" height="3303"></rect>
-                    <g id="x" transform="translate(19.000000, 35.000000)" stroke="#2B292D" stroke-linecap="round"
-                      stroke-linejoin="round" stroke-width="2">
-                      <g id="Shape">
-                        <g transform="translate(2.000000, 2.000000)">
-                          <path d="M15,0 L0,15"></path>
-                          <path d="M0,0 L15,15"></path>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
+        <img class="burger" src="assets/images/UI/burger.svg" alt="burger icon">
+        <img class="close" src="assets/images/UI/close.svg" alt="close icon">
       </label>
 
       <ul class="main_menu-list">
@@ -155,20 +71,19 @@
     <div id="heroArea"></div>
     <div class="container">
       <ul id="sortingFlag" class="sorting">
-        <li>Сортувати за:</li>
-        <li>Популярністю</li>
-        <li>Новизною</li>
+        <li class="sorting-item">Сортувати за:</li>
+        <li class="sorting-item">Популярністю</li>
+        <li class="sorting-item">Новизною</li>
       </ul>
     </div>
     <main id="idMain"></main>
 
-    <div id="showMore" class="show_more">
-      <img src="assets/images/UI/rotate.svg" alt="load more">
-      <!-- change to svg -->
-      <span>
+    <button id="showMore" class="show_more">
+      <img  class="show_more-image" src="assets/images/UI/rotate.svg" alt="load more">
+      <span class="show_more-text" >
         Показати ще
       </span>
-    </div>
+    </button>
 
     <footer class="main_footer">
       <div class="main_footer-container">
@@ -176,32 +91,7 @@
           <h6>Підписуйтесь на новини від Bokmal</h6>
           <div class="subscribe">
             <input type="email" placeholder="E-Mail">
-            <button class="button--icon">
-              <svg class="arrow-icon" width="45px" height="17px" viewBox="0 0 24 17" version="1.1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>B8E38A84-2831-4375-B23C-D73D1775B945</title>
-                <desc>Created with sketchtool.</desc>
-                <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <g id="Bokmal_home-page_for-all_V2" transform="translate(-413.000000, -3403.000000)" stroke="#000000"
-                    stroke-width="2">
-                    <g id="footer" transform="translate(0.000000, 3317.000000)">
-                      <g id="subscription">
-                        <g transform="translate(114.000000, 32.000000)">
-                          <g id="arrow-right" transform="translate(301.219178, 56.000000)">
-                            <g id="Shape">
-                              <path class="small" d="M0,6.5 L18.7397251,6.5" style="transition: all 0.2s ease-in-out">
-                              </path>
-                              <polyline points="11.7123282 0 18.7397251 6.5 11.7123282 13"></polyline>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </button>
+            <button class="button--icon"><img src="assets/images/UI/arrow.svg" alt="arrow"></button>
           </div>
         </div>
         <div class="main_footer-social">
@@ -220,7 +110,6 @@
         </div>
       </div>
     </footer>
-    <!-- <div class="scroller"></div> -->
   </div>
 </body>
 

@@ -30,8 +30,8 @@
     top: 2rem;
     right: 2rem;
     width: 4rem;
-    svg {
-      //not BEM
+    img {
+      //img - not BEM
       width: 100%;
       resize: horizontal;
       height: auto;
@@ -148,4 +148,5 @@
 
 .search.open ~ .main_menu .burger {
   position: fixed;
+  width: 3rem;
 }

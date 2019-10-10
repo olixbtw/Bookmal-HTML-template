@@ -20,6 +20,7 @@
     height: unset;
     height: auto;
     font-size: 1rem;
+    background: transparent;
   }
 
   &-toggler {
@@ -31,14 +32,13 @@
       width: unset;
     }
     img {
-      //not BEM
+      //img - not BEM
       display: block;
       width: 100%;
       object-fit: contain;
     }
 
     .close {
-      //not BEM
       display: none;
     }
   }
