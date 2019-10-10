@@ -16,11 +16,14 @@
 
     @include screen-lg {
       justify-content: space-around;
-      > * {
-        margin-right: 1rem;
-        margin-left: 1rem;
+      @include screen-m-sm() {
+        > * {
+          padding-right: .5rem;
+          padding-left: .5rem;
+        }
       }
     }
+    
     @extend %container;
     display: flex;
     flex-wrap: wrap;
@@ -42,7 +45,7 @@
     min-width: 30rem;
 
     @include screen-m-xsm() {
-      max-width: 45rem;
+      max-width: 50rem;
     }
     @include screen-sm() {
       width: unset;

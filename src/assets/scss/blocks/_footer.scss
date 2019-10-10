@@ -100,6 +100,7 @@
 .subscribe {
   //not BEM
   margin-top: 3rem;
+  min-width: 30rem;
   @include screen-md {
     margin: 2rem 0;
   }

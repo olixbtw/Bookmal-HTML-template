@@ -20,6 +20,8 @@ const articlesList = [
   { title: 'Шість пригодницьких історій для літнього читання',                category:'kids',    theme: 'ОГЛЯДИ',           date: [2017, 10, 1],     views: 980,   img:{src:'Creatures.png',alt:'Mice'}},
   { title: '"Любий щоденнику": ваш "настільний" психоаналітик',               category:'kids',    theme: 'ПОРАДИ',           date: [2017, 10, 1],     views: 14,    img:{src:'Creatures.png',alt:'Mice'}},
   { title: 'Шість пригодницьких історій для літнього читання',                category:'kids',    theme: 'ФІЛЬМИ',           date: [2017, 10, 1],     views: 890,   img:{src:'Creatures.png',alt:'Mice'}},
+  { title: 'Шість пригодницьких історій для літнього читання',                category:'kids',    theme: 'ФІЛЬМИ',           date: [2017, 10, 1],     views: 890,   img:{src:'Creatures.png',alt:'Mice'}},
+  { title: 'Шість пригодницьких історій для літнього читання',                category:'kids',    theme: 'ФІЛЬМИ',           date: [2017, 10, 1],     views: 890,   img:{src:'Creatures.png',alt:'Mice'}},
 ]
 
 module.exports = articlesList;

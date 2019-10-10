@@ -1,21 +1,12 @@
 let baseElement = document.getElementById('idMain')
 
-const defaultSectionStructure = { items: 3, class: 'three_articles', mod: [], header: '' }
+let articlesLeft = [];
 const getSection = require('./generate/section')
-const generateSorter = require('./generate/sorter')
-
-//for more articles than needed
-
-// let showMore = document.getElementById('showMore')
-// const appendArticle = () => {
-//   console.log('123')
-//   event.preventDefault() // page started to scroll???
-// }
+const getArticle = require('./generate/article')
 
 //render all items
-const renderPage = (articlesArr, sections) => {
-  let articles = [...articlesArr]
-  // showMore.removeEventListener('click', appendArticle)
+const renderPage = (articles, sections) => {
+  let articlesArr = [...articles]
   baseElement.innerHTML = ''
 
   //render all sections from structure
@@ -23,9 +14,9 @@ const renderPage = (articlesArr, sections) => {
   sections.forEach(section => {
     let sectionArticles = [];
     for (let i = 0; i < section.items; i++) {
-      if (articles[0]) {
-        sectionArticles.push(articles[0])
-        articles.shift()
+      if (articlesArr[0]) {
+        sectionArticles.push(articlesArr[0])
+        articlesArr.shift()
       }
     }
 
@@ -36,17 +27,51 @@ const renderPage = (articlesArr, sections) => {
 
   });
 
-  if (baseElement.children[baseElement.children.length - 1].classList.contains('three_articles') && baseElement.children[baseElement.children.length - 1].getElementsByTagName('article').length % 2 === 0) {
-    let children = baseElement.children[baseElement.children.length - 1].getElementsByTagName('article')
-    children[0].setAttribute('style', 'margin-right:auto;margin-left:auto;')
-    children[1].setAttribute('style', 'margin-right:auto;margin-left:auto;')
-  }
-
-  // if (articles.length) {
-  //   showMore.classList.add('thereIsMore')
-  //   showMore.addEventListener('click', appendArticle)
-  // }
+  margins.check()
+  articlesLeft = articlesArr
+  checkMore()
 }
 
-module.exports = { renderPage }
+const addArticles = () => {
+  margins.remove()
+  let appendChildren = '';
+  for (let i = 0; i < 5; i++)
+    if (articlesLeft) {
+      appendChildren += getArticle('three_articles', articlesLeft[0])
+      articlesLeft.shift()
+    }
 
+  baseElement.children[baseElement.children.length - 1].children[0].innerHTML += appendChildren
+  checkMore()
+  margins.check()
+  // event.preventDefault()
+}
+
+module.exports = {
+  renderPage,
+  addArticles
+}
+
+const margins = {
+  check: () => {
+    let children = baseElement.children[baseElement.children.length - 1].getElementsByTagName('article')
+    if (baseElement.children[baseElement.children.length - 1].classList.contains('three_articles')
+      && children.length % 3 !== 0) {
+      children[children.length - 1].setAttribute('style', 'margin-right:auto; margin-left:auto;')
+      if (children.length % 3 === 2)
+        children[children.length - 2].setAttribute('style', 'margin-right:auto; margin-left:auto;')
+    }
+  },
+  remove: () => {
+    let children = baseElement.children[baseElement.children.length - 1].getElementsByTagName('article')
+    for (let i = 0; i < children.length; i++)
+      children[i].removeAttribute('style')
+  }
+}
+
+const checkMore = () => {
+  if (articlesLeft.length)
+    showMore.classList.add('thereIsMore')
+  else
+    showMore.classList.remove('thereIsMore')
+}

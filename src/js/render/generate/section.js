@@ -1,6 +1,5 @@
 getArticle = require('./article')
 
-
 module.exports = (sectionParams, articles) => {
   let generatedModifier = '';
   let header = '';

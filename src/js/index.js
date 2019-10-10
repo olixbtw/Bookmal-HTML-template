@@ -23,17 +23,19 @@ const drawPage = () => {
 window.onload = () => {
   drawPage()
 
+  addClick(render.addArticles,'showMore')
+
   addClick(() => {
     state.sort = sort.click()
     if (state.sort) drawPage()
-    if (state.sort) console.log('sort')
+    // if (state.sort) console.log('sort')
   }, 'sortingFlag')
 
   addClick(() => {
     state.filter = filter.click()
     if (state.filter) drawPage()
-    if (state.filter) theme.change(state.filter)
-    if (state.filter) console.log('filter')
+    // if (state.filter) theme.change(state.filter)
+    // if (state.filter) console.log('filter')
   }, 'filterFlag')
 
   window.addEventListener('scroll', toggleMainMenuScrolled)
