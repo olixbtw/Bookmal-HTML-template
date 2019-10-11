@@ -18,6 +18,12 @@
 }
 
 .button--icon {
+  background: transparent;
   padding: 2rem;
+  border-radius: 0px;
   cursor: pointer;
+  &:hover,
+  &.active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
 }

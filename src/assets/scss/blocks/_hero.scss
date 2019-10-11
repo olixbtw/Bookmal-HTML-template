@@ -58,16 +58,16 @@
     margin: 3rem 0;
     color: $color-bg-white;
 
-    .block_stats-date {
-      &::before {
-        background-image: url("/assets/images/UI/white/calendar.svg");
-      }
-    }
-    .block_stats-views {
-      &::before {
-        background-image: url("/assets/images/UI/white/eye.svg");
-      }
-    }
+    // .block_stats-date {
+    //   &::before {
+    //     background-image: url("/assets/images/UI/calendar.svg");
+    //   }
+    // }
+    // .block_stats-views {
+    //   &::before {
+    //     background-image: url("/assets/images/UI/eye.svg");
+    //   }
+    // }
   }
 
   &-bookmark {
