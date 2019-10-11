@@ -108,12 +108,14 @@
   }
   &-aside {
     align-self: stretch;
-    border-left: 0.2rem solid $color-bg-light;
-    .themeBaby & {
-      border-color: $color-pink-light;
-    }
-    .themeTeens & {
-      border-color: $color-blue-light;
+    @include screen-m-sm {
+      border-left: 0.2rem solid $color-bg-light;
+      .themeBaby & {
+        border-color: $color-pink-light;
+      }
+      .themeTeens & {
+        border-color: $color-blue-light;
+      }
     }
 
     display: flex;
@@ -164,6 +166,10 @@
       width: 100%;
       order: 99;
       text-transform: uppercase;
+      .themeBaby &,
+      .themeTeens & {
+        color: $color-bg-white;
+      }
       margin: 1rem 0 0;
 
       .dropdown {

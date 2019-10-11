@@ -18,12 +18,15 @@ const themeDefault = () => {
 }
 
 const chooseTheme = (key) => {
+  if (typeof (key) === 'string')
+    key = key.toLowerCase()
+
   switch (key) {
-    case 'Baby Side':
+    case 'Baby Side'.toLowerCase():
       themeKids()
       return
 
-    case 'Teen Side':
+    case 'Teen Side'.toLowerCase():
       themeTeens()
       return
 
