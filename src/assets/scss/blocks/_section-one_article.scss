@@ -123,6 +123,13 @@ $offset-card: 25vw;
     padding: 3rem;
     background: white;
     border: 0.3rem solid $color-bg-light;
+    .themeBaby & {
+      border-color: $color-pink-light;
+    }
+    .themeTeens & {
+      border-color: $color-blue-light;
+    }
+
     position: relative;
 
     box-shadow: 1px 2px 0.15rem rgba(0, 0, 0, 0.05);

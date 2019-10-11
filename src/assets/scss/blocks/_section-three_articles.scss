@@ -1,6 +1,12 @@
 .three_articles {
   &--bg_dark {
     background: $color-bg-light;
+    .themeBaby & {
+      background: $color-pink-light;
+    }
+    .themeTeens & {
+      background: $color-blue-light;
+    }
   }
   padding: 3rem 0 0;
   margin: 0;

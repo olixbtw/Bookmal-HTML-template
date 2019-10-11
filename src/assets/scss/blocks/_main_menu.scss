@@ -12,6 +12,13 @@
   }
   z-index: 999;
   border-right: 0.2rem solid $color-bg-light;
+  .themeBaby & {
+    border-color: $color-pink-light;
+  }
+  .themeTeens & {
+    border-color: $color-blue-light;
+  }
+
   transition: padding 0.25s ease-out;
   padding: 1rem;
   @include screen-m-sm {

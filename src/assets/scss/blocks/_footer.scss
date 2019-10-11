@@ -1,6 +1,12 @@
 .main_footer {
   //styling
   background: $color-bg-light;
+  .themeBaby & {
+    background: $color-pink-light;
+  }
+  .themeTeens & {
+    background: $color-blue-light;
+  }
   color: $color-text-grey;
   padding: 4rem 0 1rem;
   position: relative;
@@ -69,6 +75,13 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background: $color-bg-light;
+    .themeBaby & {
+      background: $color-pink-light;
+    }
+    .themeTeens & {
+      background: $color-blue-light;
+    }
+
   }
   img {
     transition: 0.15s all ease-in-out;
