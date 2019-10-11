@@ -25,22 +25,38 @@
   //layout:
   &-container {
     @extend %container;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include screen-lg {
+      justify-content: space-around;
+    }
+    @include screen-md {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include screen-sm {
+      align-items: flex-start;
+    }
   }
   &-subscribe,
   &-copy,
   &-social {
+    text-align: center;
+    max-width: 43rem;
+    @include screen-sm {
+      text-align: left;
+      max-width: unset;
+    }
     @include screen-m-md {
-      max-width: 43rem;
+      text-align: left;
+    // }
+    // @include screen-m-lg {
+      margin-right: 5rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
-    margin-right: 5rem;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  &-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
 
@@ -89,7 +105,7 @@
 
 .socials {
   margin-left: -2rem;
-  &-icon{
+  &-icon {
     //img - not BEM
     img {
       transition: 0.15s all ease-in-out;
