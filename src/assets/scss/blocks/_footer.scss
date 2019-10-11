@@ -12,7 +12,6 @@
   position: relative;
   box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.05);
 
- 
   &-subscribe,
   &-copy,
   &-social {
@@ -33,30 +32,26 @@
     @include screen-m-md {
       max-width: 43rem;
     }
+    margin-right: 5rem;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   &-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    > * {
-      //not BEM
-      margin-right: 5rem;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
   }
 }
 
 .subscribe {
-  //not BEM
   margin-top: 3rem;
   min-width: 30rem;
+  position: relative;
   @include screen-md {
     margin: 2rem 0;
   }
-  position: relative;
-  input {
+  &-input {
     width: 100%;
     background: transparent;
     box-shadow: none;
@@ -67,7 +62,7 @@
     font-size: 1.6rem;
     border-bottom: 0.2rem solid $color-text-dark;
   }
-  button {
+  &-submit {
     position: absolute;
     right: 0;
     top: 50%;
@@ -81,25 +76,27 @@
     .themeTeens & {
       background: $color-blue-light;
     }
-
-  }
-  img {
-    transition: 0.15s all ease-in-out;
-    will-change: auto;
-    &:hover {
-      filter: drop-shadow(0px 0px 0.15rem rgba(0, 0, 0, 0.3));
+    img {
+      //img - not BEM
+      transition: 0.15s all ease-in-out;
+      will-change: auto;
+      &:hover {
+        filter: drop-shadow(0px 0px 0.15rem rgba(0, 0, 0, 0.3));
+      }
     }
   }
 }
 
 .socials {
-  //not BEM
   margin-left: -2rem;
-  img {
-    transition: 0.15s all ease-in-out;
-    will-change: auto;
-    &:hover {
-      filter: drop-shadow(0px 0px 0.15rem rgba(0, 0, 0, 0.3));
+  &-icon{
+    //img - not BEM
+    img {
+      transition: 0.15s all ease-in-out;
+      will-change: auto;
+      &:hover {
+        filter: drop-shadow(0px 0px 0.15rem rgba(0, 0, 0, 0.3));
+      }
     }
   }
 }
