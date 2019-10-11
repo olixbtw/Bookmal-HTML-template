@@ -14,7 +14,7 @@
     <div class="search" id="search">
       <div class="search-container">
         <button class="search-close">
-          <img src="assets/images/UI/close.svg" alt="close icon">
+          <img src="assets/images/UI/close.svg" alt="close icon" data-theme="default">
         </button>
         <h1 class="search-header">Пошук</h1>
         <input type="text" class="search-input">
@@ -23,7 +23,7 @@
     </div>
 
     <header class="main_header">
-      <img class="main_header-logo" src="assets/images/Logo.svg" alt="logo image">
+      <img class="main_header-logo" src="assets/images/Logo.svg" alt="logo image" data-theme="default">
 
       <div id="filterFlag" class="main_header-dropdown dropdown">
         <span class="dropdown-placeholder">Для усіх</span>
@@ -42,18 +42,18 @@
         </ul>
       </nav>
 
-      <button class="main_header-header_icon main_header-header_icon--search button--icon "><img
-          src="assets/images/UI/magnifier.svg" alt="magnifier icon"></button>
-      <button class="main_header-header_icon main_header-header_icon--bookmark button--icon "><img
-          src="assets/images/UI/bookmark.svg" alt="bookmark icon"></button>
+      <button class="main_header-header_icon main_header-header_icon--search button button--icon "><img
+          src="assets/images/UI/magnifier.svg" alt="magnifier icon" data-theme="default"></button>
+      <button class="main_header-header_icon main_header-header_icon--bookmark button button--icon "><img
+          src="assets/images/UI/bookmark.svg" alt="bookmark icon" data-theme="default"></button>
     </header>
 
     <input id="mainMenuActivator" type="checkbox">
     <nav class="main_menu">
 
       <label for="mainMenuActivator" class="main_menu-toggler">
-        <img class="burger" src="assets/images/UI/burger.svg" alt="burger icon">
-        <img class="close" src="assets/images/UI/close.svg" alt="close icon">
+        <img class="burger" src="assets/images/UI/burger.svg" alt="burger icon" data-theme="default">
+        <img class="close" src="assets/images/UI/close.svg" alt="close icon" data-theme="default">
       </label>
 
       <ul class="main_menu-list">
@@ -81,8 +81,8 @@
     <main id="idMain"></main>
 
     <button id="showMore" class="show_more">
-      <img  class="show_more-image" src="assets/images/UI/rotate.svg" alt="load more">
-      <span class="show_more-text" >
+      <img class="show_more-image" src="assets/images/UI/rotate.svg" alt="load more">
+      <span class="show_more-text">
         Показати ще
       </span>
     </button>
@@ -90,18 +90,22 @@
     <footer class="main_footer">
       <div class="main_footer-container">
         <div class="main_footer-subscribe">
-          <h6>Підписуйтесь на новини від Bokmal</h6>
+          <h6 class="main_footer-subscribe_title">Підписуйтесь на новини від Bokmal</h6>
           <div class="subscribe">
-            <input type="email" placeholder="E-Mail">
-            <button class="button--icon"><img src="assets/images/UI/arrow.svg" alt="arrow"></button>
+            <input class="subscribe-input" type="email" placeholder="E-Mail">
+            <button class="subscribe-submit button button--icon"><img src="assets/images/UI/arrow.svg"
+                alt="arrow"></button>
           </div>
         </div>
         <div class="main_footer-social">
-          <h6>Ми є у соціальних мережах</h6>
+          <h6 class="main_footer-social__title">Ми є у соціальних мережах</h6>
           <div class="socials">
-            <button class="button--icon"><img src="assets/images/social/facebook.svg" alt="arrow"></button>
-            <button class="button--icon"><img src="assets/images/social/instagram.svg" alt="arrow"></button>
-            <button class="button--icon"><img src="assets/images/social/twitter.svg" alt="arrow"></button>
+            <button class="socials-icon button button--icon"><img src="assets/images/social/facebook.svg"
+                alt="arrow"></button>
+            <button class="socials-icon button button--icon"><img src="assets/images/social/instagram.svg"
+                alt="arrow"></button>
+            <button class="socials-icon button button--icon"><img src="assets/images/social/twitter.svg"
+                alt="arrow"></button>
           </div>
         </div>
         <div class="main_footer-copy">

@@ -7,7 +7,7 @@
         <g id="Bookmol_style-guide-–-heder&amp;menu&amp;elements" transform="translate(-562.000000, -1834.000000)">
             <rect fill="none" x="0" y="0" width="1366" height="2290"></rect>
             <g id="bookmark" transform="translate(117.000000, 1834.000000)" fill="#FFC830" stroke="#FFC830" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <g id="bookmark_active" transform="translate(447.000000, 2.000000)">
+                <g id="bookmark_yellow_active" transform="translate(447.000000, 2.000000)">
                     <path d="M22,28.2857143 L11,20.4285714 L0,28.2857143 L0,3.14285714 C0,1.40710507 1.40710507,0 3.14285714,0 L18.8571429,0 C20.5928949,0 22,1.40710507 22,3.14285714 L22,28.2857143 Z"></path>
                 </g>
             </g>

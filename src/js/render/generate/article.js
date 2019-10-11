@@ -17,7 +17,7 @@ module.exports = (className, params) => {
             </div>
             <div class="${className}-actions">
               <button class="${className}-button button">Читати</button>
-              <div class="${className}-bookmark bookmark-block"><img src="assets/images/UI/bookmark_big.svg"
+              <div class="${className}-bookmark bookmark-block"><img src="assets/images/UI/bookmark_yellow_big.svg"
                   alt="bookmark icon"></div>
             </div>
           </div>

@@ -26,12 +26,12 @@
                     <mask id="mask-2" fill="white">
                         <use xlink:href="#path-1"></use>
                     </mask>
-                    <rect stroke="#F1EFF3" x="0.5" y="0.5" width="1367" height="50"></rect>
+                    <rect stroke="#FFFFFF" x="0.5" y="0.5" width="1367" height="50"></rect>
                     <g id="search" mask="url(#mask-2)" stroke-linecap="round" stroke-linejoin="round">
                         <g transform="translate(1295.000000, 18.000000)">
                             <g>
-                                <circle class="mgnfr-icon" id="Oval" stroke="#2B292D" stroke-width="2" cx="6.66666667" cy="6.66666667" r="6.66666667"></circle>
-                                <path class="mgnfr-icon" d="M16,16 L11.3777778,11.3777778" id="Shape" stroke="#2B292D" stroke-width="2"></path>
+                                <circle class="mgnfr-icon" id="Oval" stroke="#FFFFFF" stroke-width="2" cx="6.66666667" cy="6.66666667" r="6.66666667"></circle>
+                                <path class="mgnfr-icon" d="M16,16 L11.3777778,11.3777778" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
                             </g>
                         </g>
                     </g>

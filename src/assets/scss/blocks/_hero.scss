@@ -60,12 +60,12 @@
 
     .block_stats-date {
       &::before {
-        background-image: url("/assets/images/UI/calendar-grey.svg");
+        background-image: url("/assets/images/UI/white/calendar.svg");
       }
     }
     .block_stats-views {
       &::before {
-        background-image: url("/assets/images/UI/eye-grey.svg");
+        background-image: url("/assets/images/UI/white/eye.svg");
       }
     }
   }
