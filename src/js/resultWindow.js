@@ -28,7 +28,7 @@ const generate = (item) => {
     `
   else return `
     <li class="search-result_item">
-      <span class="search-result_text">Ми нічого на знайшли ;(</span>
+      <span class="search-result_text">Ми нічого не знайшли ;(</span>
     </li>
   `
 }

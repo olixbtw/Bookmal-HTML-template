@@ -72,6 +72,18 @@ main section:first-child {
   z-index: 1001;
   position: fixed;
   background: $color-bg-white;
+  .themeTeens &,
+  .themeBaby & {
+    &::after {
+      border-color: $color-bg-white;
+    }
+  }
+  .themeBaby & {
+    background: $color-pink;
+  }
+  .themeTeens & {
+    background: $color-blue;
+  }
   transition: all 0.2s ease-in-out;
   &:hover {
     opacity: 1;

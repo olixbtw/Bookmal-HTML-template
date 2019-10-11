@@ -14,6 +14,7 @@ $boradius: 2rem;
   font-family: "ProximaNova", sans-serif;
   font-weight: 600;
   position: relative;
+  color: $color-text-dark;
   &-placeholder {
     @extend %mWidth;
     @extend %buttonLike;

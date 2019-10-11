@@ -8,19 +8,30 @@
   top: 0;
   z-index: 1000;
   background: $color-bg-white;
-  border-bottom: 0.2rem solid $color-bg-light;
 
+  .themeTeens &,
+  .themeBaby & {
+    color: $color-bg-white;
+  }
+  .themeBaby & {
+    background: $color-pink;
+  }
+  .themeTeens & {
+    background: $color-blue;
+  }
+  border-bottom: 0.2rem solid $color-bg-light;
   box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.05);
 
   &-logo {
     object-fit: contain;
     padding: 0 3rem;
-    margin-top: auto;
-    margin-bottom: auto;
+    // margin-top: auto;
+    // margin-bottom: auto;
     margin-right: 1rem;
     align-self: stretch;
-    height: 2.3rem;
-    border-left: 0.2rem solid $color-bg-light;
+    // height: 2.3rem;
+    // height: 100%;
+    // border-left: 0.2rem solid $color-bg-light;
     border-right: 0.2rem solid $color-bg-light;
     @include screen-sm {
       height: 4rem;
@@ -31,6 +42,7 @@
 
     @include screen-lg {
       position: absolute;
+      border: 0px solid;
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
@@ -82,17 +94,19 @@
       }
     }
   }
+  &-aside {
+    align-self: stretch;
+    border-left: 0.2rem solid $color-bg-light;
+    display: flex;
+  }
   &-header_icon {
-    // @include screen-lg {
-    //   order: 5;
-    // }
+    margin: auto;
 
     &:active,
     &:focus {
       outline: none;
     }
     &:first-of-type {
-      border-left: 0.2rem solid $color-bg-light;
       @include screen-sm {
         border: 0px solid transparent;
       }

@@ -4,6 +4,12 @@
   left: 0;
   height: 100vh;
   background: $color-bg-white;
+  .themeBaby & {
+    background: $color-pink;
+  }
+  .themeTeens & {
+    background: $color-blue;
+  }
   z-index: 999;
   border-right: 0.2rem solid $color-bg-light;
   transition: padding 0.25s ease-out;
@@ -43,6 +49,16 @@
     }
   }
   &-list {
+    .themeBaby &,
+    .themeTeens & {
+      color: $color-bg-white;
+    }
+    .themeBaby & {
+      background: $color-pink;
+    }
+    .themeTeens & {
+      background: $color-blue;
+    }
     background: $color-bg-white;
     position: fixed;
     top: 0;
@@ -83,6 +99,10 @@
     cursor: pointer;
     &:hover {
       &::before {
+        .themeBaby &,
+        .themeTeens & {
+          background: $color-bg-white;
+        }
         background: $color-pink;
         width: 3rem;
       }
@@ -146,6 +166,10 @@
   &:hover {
     &::before {
       background: $color-pink;
+      .themeBaby &,
+      .themeTeens & {
+        background: $color-bg-white;
+      }
     }
   }
 }
