@@ -66,40 +66,6 @@
     // }
   } // &-dropdown
 
-  &-navigation {
-    font-size: 1.8rem;
-    font-weight: 600;
-    @include screen-lg {
-      display: none;
-    }
-    ul {
-      display: flex;
-      li {
-        padding: 1.5rem;
-        cursor: pointer;
-        position: relative;
-        &::after {
-          display: block;
-          content: "";
-          position: absolute;
-          bottom: 0.75rem;
-          height: 0.2rem;
-          background: $color-yellow;
-          opacity: 0;
-          width: 0%;
-          left: 50%;
-          transition: all 0.2s;
-        }
-        &:hover {
-          &::after {
-            left: 5%;
-            width: 90%;
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
   &-aside {
     align-self: stretch;
     @include screen-m-sm {
@@ -218,8 +184,44 @@
 }
 
 .global-container {
+  //fix for header
   padding-top: 7.5rem;
   @include screen-sm {
     padding-top: 0;
+  }
+}
+
+.header_navigation {
+  font-size: 1.8rem;
+  font-weight: 600;
+  @include screen-lg {
+    display: none;
+  }
+  &-list {
+    display: flex;
+  }
+  &-item {
+    padding: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0.75rem;
+      height: 0.2rem;
+      background: $color-yellow;
+      opacity: 0;
+      width: 0%;
+      left: 50%;
+      transition: all 0.2s;
+    }
+    &:hover {
+      &::after {
+        left: 5%;
+        width: 90%;
+        opacity: 1;
+      }
+    }
   }
 }
