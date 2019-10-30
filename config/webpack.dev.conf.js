@@ -15,6 +15,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       errors: true
     }
   },
+  // module: {
+  //   rules: [{
+  //     enforce: 'pre',
+  //     test: /\.js$/,
+  //     exclude: /node_modules/,
+  //     loader: 'eslint-loader',
+  //   }]
+  // },
   plugins: [
     new StylelintPlugin(),
     new webpack.SourceMapDevToolPlugin({

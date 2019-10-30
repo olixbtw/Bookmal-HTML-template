@@ -1,4 +1,4 @@
-const generateDate = require('./date')
+const generateDate = require("./date");
 
 module.exports = (className, params) => {
   return `
@@ -24,5 +24,5 @@ module.exports = (className, params) => {
         </div>
       </div>
     </article>
-  `
-}
+  `;
+};

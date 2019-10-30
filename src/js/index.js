@@ -1,54 +1,54 @@
-const debounce = require('lodash/debounce')
+const debounce = require("lodash/debounce");
 
-import './resultWindow'
-import articles from '../_data/articles'
-import structure from '../_data/structure'
-import sort from './sort/sort'
-import render from './render/render'
-import state from './STORE'
-import filter from './sort/filter'
-import theme from './theme'
+require("./resultWindow");
+const articles = require("../_data/articles");
+const structure = require("../_data/structure");
+const sort = require("./sort/sort");
+const render = require("./render/render");
+const state = require("./STORE");
+const filter = require("./sort/filter");
+const theme = require("./theme");
 
-const addClick = (func, elem) => document.getElementById(elem).addEventListener('click', func)
+const addClick = (func, elem) => document.getElementById(elem).addEventListener("click", func);
 
 const drawPage = () => {
-  theme.change(state.filter)
+  theme.change(state.filter);
   render.renderPage(
     filter.apply(
       sort.apply(articles, state.sort), state.filter)
-    , structure)
+    , structure);
 
-  document.getElementById('sortingFlag')
-}
+  document.getElementById("sortingFlag");
+};
 
 window.onload = () => {
-  drawPage()
+  drawPage();
 
-  addClick(render.addArticles, 'showMore')
-
-  addClick(() => {
-    state.sort = sort.click()
-    if (state.sort) drawPage()
-  }, 'sortingFlag')
+  addClick(render.addArticles, "showMore");
 
   addClick(() => {
-    state.filter = filter.click()
-    if (state.filter) drawPage()
-  }, 'filterFlag')
+    state.sort = sort.click();
+    if (state.sort) drawPage();
+  }, "sortingFlag");
 
-  window.addEventListener('scroll', toggleMainMenuScrolled)
-}
+  addClick(() => {
+    state.filter = filter.click();
+    if (state.filter) drawPage();
+  }, "filterFlag");
+
+  window.addEventListener("scroll", toggleMainMenuScrolled);
+};
 
 const toggleMainMenuScrolled = debounce((event) => {
-  let menuElem = document.getElementsByClassName('main_menu')[0]
-  let topArrow = document.getElementById('toTop')
+  let menuElem = document.getElementsByClassName("main_menu")[0];
+  let topArrow = document.getElementById("toTop");
 
   window.pageYOffset > 50
-    ? menuElem.classList.add('scroll')
-    : menuElem.classList.remove('scroll')
+    ? menuElem.classList.add("scroll")
+    : menuElem.classList.remove("scroll");
 
   window.pageYOffset > window.innerHeight
-    ? topArrow.classList.add('scroll')
-    : topArrow.classList.remove('scroll')
+    ? topArrow.classList.add("scroll")
+    : topArrow.classList.remove("scroll");
 
-}, 150, { maxWait: 3000 })
+}, 150, { maxWait: 3000 });

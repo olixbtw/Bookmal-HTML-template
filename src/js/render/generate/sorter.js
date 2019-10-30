@@ -6,5 +6,5 @@ module.exports = () => `
       <li>Новизною</li>
     </ul>
   </div>
-`
+`;
 
