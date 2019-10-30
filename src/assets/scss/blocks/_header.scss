@@ -13,12 +13,6 @@
   .themeBaby & {
     color: $color-bg-white;
   }
-  .themeBaby & {
-    background: $color-pink;
-  }
-  .themeTeens & {
-    background: $color-blue;
-  }
   border-bottom: 0.2rem solid $color-bg-light;
   .themeBaby & {
     border-color: $color-pink-light;
@@ -155,12 +149,6 @@
     &-logo {
       margin: 1rem auto;
       height: 3.5rem;
-    }
-    &-dropdown {
-      li {
-        &.active {
-        }
-      }
     }
     &-dropdown {
       width: 100%;

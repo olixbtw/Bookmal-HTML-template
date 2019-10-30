@@ -3,15 +3,9 @@
   top: 0;
   left: 0;
   height: 100vh;
-  background: $color-bg-white;
-  .themeBaby & {
-    background: $color-pink;
-  }
-  .themeTeens & {
-    background: $color-blue;
-  }
   z-index: 999;
   border-right: 0.2rem solid $color-bg-light;
+  background: $color-bg-white;
   .themeBaby & {
     border-color: $color-pink-light;
   }
@@ -113,8 +107,6 @@
         background: $color-pink;
         width: 3rem;
       }
-    }
-    &--active {
     }
   }
   &::after {

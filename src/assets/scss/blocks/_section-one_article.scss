@@ -158,9 +158,8 @@ $offset-card: 25vw;
     transform: translateY(-50%);
     right: 2rem;
   }
-}
 
-.one_article {
+  // mobile
   @include screen-lg() {
     &-shrink {
       margin: 5vw auto 5vw 4rem;

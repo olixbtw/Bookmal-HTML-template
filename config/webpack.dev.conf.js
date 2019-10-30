@@ -1,6 +1,7 @@
-const webpack =  require('webpack')
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   // DEV config
@@ -15,6 +16,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
+    new StylelintPlugin(),
     new webpack.SourceMapDevToolPlugin({
       filename: '[file].map'
     })
