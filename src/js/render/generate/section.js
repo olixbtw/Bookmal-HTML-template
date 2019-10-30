@@ -1,4 +1,4 @@
-getArticle = require("./article");
+const getArticle = require("./article");
 
 module.exports = (sectionParams, articles) => {
   let generatedModifier = "";

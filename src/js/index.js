@@ -39,7 +39,7 @@ window.onload = () => {
   window.addEventListener("scroll", toggleMainMenuScrolled);
 };
 
-const toggleMainMenuScrolled = debounce((event) => {
+const toggleMainMenuScrolled = debounce(() => {
   let menuElem = document.getElementsByClassName("main_menu")[0];
   let topArrow = document.getElementById("toTop");
 
