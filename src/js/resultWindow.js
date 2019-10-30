@@ -21,7 +21,7 @@ const generate = (item) => {
   if (item) return `
     <li class="search-result_item">
       <a href="${item.link}" class="search-result_link">
-        <img src="./assets/images/common/${item.img.src}" alt="${item.img.src}" class="search-result_image">
+        <img class="search-image" src="./assets/images/common/${item.img.src}" alt="${item.img.src}" class="search-result_image">
         <span class="search-result_text">${item.title}</span>
       </a>
     </li>

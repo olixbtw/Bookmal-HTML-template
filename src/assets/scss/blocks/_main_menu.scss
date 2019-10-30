@@ -38,7 +38,7 @@
     @include screen-sm {
       width: unset;
     }
-    img {
+    &-image {
       //img - not BEM
       display: block;
       width: 100%;

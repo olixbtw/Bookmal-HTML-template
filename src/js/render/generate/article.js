@@ -4,7 +4,7 @@ module.exports = (className, params) => {
   return `
     <article class="${className}-content_block">
       <figure class="${className}-image">
-        <img src="assets/images/common/${params.img.src}" alt="${params.img.alt}">
+        <img class="${className}-image-image" src="assets/images/common/${params.img.src}" alt="${params.img.alt}">
       </figure>
       <div class="${className}-column">
         <div class="${className}-shrink">
@@ -17,7 +17,7 @@ module.exports = (className, params) => {
             </div>
             <div class="${className}-actions">
               <button class="${className}-button button">Читати</button>
-              <div class="${className}-bookmark bookmark-block"><img src="assets/images/UI/bookmark_yellow_big.svg"
+              <div class="${className}-bookmark bookmark-block"><img class="bookmark-block-image" src="assets/images/UI/bookmark_yellow_big.svg"
                   alt="bookmark icon"></div>
             </div>
           </div>

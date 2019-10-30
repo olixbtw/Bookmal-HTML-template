@@ -40,11 +40,12 @@
     top: 2rem;
     right: 2rem;
     width: 4rem;
-    img {
+    &-image {
       //img - not BEM
       width: 100%;
       resize: horizontal;
       height: auto;
+      cursor: pointer;
     }
   }
   &-header {

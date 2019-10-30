@@ -82,7 +82,7 @@ $offset-card: 25vw;
     margin-bottom: 1.5rem;
   }
   &-image {
-    img {
+    &-image {
       //img - not BEM
       height: 100%;
       width: 100%;
