@@ -1,5 +1,8 @@
 ### Bookmal website
 
+the task is to build up UI from data using no frameworks.
+
+
 ## Build Setup:
 # Install dependencies:
 npm install
