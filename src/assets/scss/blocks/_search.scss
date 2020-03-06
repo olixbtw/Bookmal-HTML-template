@@ -47,6 +47,10 @@
       height: auto;
       cursor: pointer;
     }
+    &:focus,
+    &:active {
+      outline: none;
+    }  
   }
   &-header {
     margin-bottom: 0.2em;

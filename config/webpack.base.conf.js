@@ -1,19 +1,19 @@
-const path = require('path')
-const fs = require('fs')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path");
+const fs = require("fs");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // Main const
 const PATHS = {
-  src: path.join(__dirname, '../src'),
-  dist: path.join(__dirname, '../build'),
-  assets: 'assets/'
-}
+  src: path.join(__dirname, "../src"),
+  dist: path.join(__dirname, "../build"),
+  assets: "assets/"
+};
 
 // Pages const for HtmlWebpackPlugin
-const PAGES_DIR = `${PATHS.src}/html/pages`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
+const PAGES_DIR = `${PATHS.src}/html/pages`;
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith(".html"));
 
 module.exports = {
   // BASE config
@@ -27,7 +27,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    publicPath: "/"
   },
   // optimization: {
   //   splitChunks: {
@@ -44,33 +44,33 @@ module.exports = {
   module: {
     rules: [{
       test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: '/node_modules/'
+      loader: "babel-loader",
+      exclude: "/node_modules/"
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file-loader',
+      loader: "file-loader",
       options: {
-        name: '[name].[ext]'
+        name: "[name].[ext]"
       }
     }, {
       test: /\.(png|jpg|jpeg|gif|svg)$/,
-      loader: 'file-loader',
+      loader: "file-loader",
       options: {
-        name: '[name].[ext]'
+        name: "[name].[ext]"
       }
     }, {
       test: /\.(sc|c|sa)ss$/,
       use: [
-        'style-loader',
+        "style-loader",
         MiniCssExtractPlugin.loader,
         {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: { sourceMap: true }
         }, {
-          loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `./config/postcss.config.js` } }
+          loader: "postcss-loader",
+          options: { sourceMap: true, config: { path: "./config/postcss.config.js" } }
         }, {
-          loader: 'sass-loader',
+          loader: "sass-loader",
           options: { sourceMap: true }
         }
       ]
@@ -83,7 +83,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}images`, to: `${PATHS.assets}images` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
-      { from: `${PATHS.src}/${PATHS.assets}static`, to: '' },
+      { from: `${PATHS.src}/${PATHS.assets}static`, to: "" },
     ]),
 
     // Automatic creation any html pages (Don't forget to RERUN dev server)
@@ -93,4 +93,4 @@ module.exports = {
       // , inject: false
     }))
   ],
-}
+};

@@ -36,10 +36,18 @@ window.onload = () => {
     if (state.filter) drawPage();
   }, "filterFlag");
 
+  addClick(() => window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  }), "toTop");
+
   window.addEventListener("scroll", toggleMainMenuScrolled);
+
 };
 
 const toggleMainMenuScrolled = debounce(() => {
+  
   let menuElem = document.getElementsByClassName("main_menu")[0];
   let topArrow = document.getElementById("toTop");
 

@@ -25,7 +25,7 @@
     transition: 0.7s all ease-in-out;
     will-change: auto;
   }
-  
+
   &:hover {
     .show_more-image {
       transform: rotate3d(0, 0, 1, 575deg);
@@ -33,5 +33,9 @@
     a {
       text-decoration: underline;
     }
+  }
+  &:focus,
+  &:active {
+    outline: none;
   }
 }

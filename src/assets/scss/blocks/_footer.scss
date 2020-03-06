@@ -88,6 +88,10 @@
     .themeTeens & {
       background: $color-blue-light;
     }
+    &:focus,
+    &:active {
+      outline: none;
+    }  
   }
   &-image {
     //img - not BEM
