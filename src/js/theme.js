@@ -1,15 +1,15 @@
 // import dropdown from './dropdown'
-const themeTeens = () => {
-  changeImgs("themes/white/");
-  document.body.classList.remove("themeKids");
-  document.body.classList.add("themeTeens");
-};
+// const themeTeens = () => {
+//   changeImgs("themes/white/");
+//   document.body.classList.remove("themeKids");
+//   document.body.classList.add("themeTeens");
+// };
 
-const themeKids = () => {
-  changeImgs("themes/white/");
-  document.body.classList.add("themeBaby");
-  document.body.classList.remove("themeTeens");
-};
+// const themeKids = () => {
+//   changeImgs("themes/white/");
+//   document.body.classList.add("themeBaby");
+//   document.body.classList.remove("themeTeens");
+// };
 
 const themeDefault = () => {
   changeImgs();
@@ -23,11 +23,13 @@ const chooseTheme = (key) => {
 
   switch (key) {
     case "Baby Side".toLowerCase():
-      themeKids();
+      // themeKids();
+      themeDefault();
       return;
 
     case "Teen Side".toLowerCase():
-      themeTeens();
+      // themeTeens();
+      themeDefault();
       return;
 
     default:
