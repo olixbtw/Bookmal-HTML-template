@@ -73,12 +73,6 @@ main section:first-child {
   position: fixed;
   background: $color-bg-white;
 
-  .themeBaby & {
-    background: $color-pink;
-  }
-  .themeTeens & {
-    background: $color-blue;
-  }
   transition: all 0.2s ease-in-out;
   &:hover {
     opacity: 1;
@@ -98,12 +92,6 @@ main section:first-child {
     height: 1.5rem;
     border-left: 0.4rem solid $color-text-dark;
     border-bottom: 0.4rem solid $color-text-dark;
-  }
-  .themeTeens &,
-  .themeBaby & {
-    &::after {
-      border-color: $color-bg-white;
-    }
   }
   &:focus,
   &:active {

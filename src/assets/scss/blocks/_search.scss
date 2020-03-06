@@ -9,16 +9,6 @@
   width: 100vw;
   bottom: 0;
   background: $color-bg-white;
-  .themeBaby &,
-  .themeTeens & {
-    color: $color-bg-white;
-  }
-  .themeBaby & {
-    background: $color-pink;
-  }
-  .themeTeens & {
-    background: $color-blue;
-  }
   z-index: 99;
   font-size: 2.3rem;
   overflow-y: scroll;
@@ -60,11 +50,6 @@
     border: 0px solid;
     border-bottom: 0.3rem solid $color-text-dark;
     color: $color-text-dark;
-    .themeBaby &,
-    .themeTeens & {
-      color: $color-bg-white;
-      border-color: $color-bg-white;
-    }
     padding: 2rem 3rem;
     margin-bottom: 1em;
     font-size: 1.5em;
@@ -118,10 +103,6 @@
     transition: all 0.3s ease-in-out;
 
     color: $color-text-dark;
-    .themeBaby &,
-    .themeTeens & {
-      color: $color-bg-white;
-    }
     text-decoration: none;
     &:hover {
       opacity: 1;

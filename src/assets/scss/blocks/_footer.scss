@@ -1,12 +1,6 @@
 .main_footer {
   //styling
   background: $color-bg-light;
-  .themeBaby & {
-    background: $color-pink-light;
-  }
-  .themeTeens & {
-    background: $color-blue-light;
-  }
   color: $color-text-grey;
   padding: 4rem 0 1rem;
   position: relative;
@@ -82,16 +76,10 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background: $color-bg-light;
-    .themeBaby & {
-      background: $color-pink-light;
-    }
-    .themeTeens & {
-      background: $color-blue-light;
-    }
     &:focus,
     &:active {
       outline: none;
-    }  
+    }
   }
   &-image {
     //img - not BEM
@@ -106,13 +94,16 @@
 .socials {
   margin-left: -2rem;
   &-icon {
-    //img - not BEM
     &-image {
       transition: 0.15s all ease-in-out;
       will-change: auto;
       &:hover {
         filter: drop-shadow(0px 0px 0.15rem rgba(0, 0, 0, 0.3));
       }
+    }
+    &:focus,
+    &:active {
+      outline: none;
     }
   }
 }
