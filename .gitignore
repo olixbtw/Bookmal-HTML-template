@@ -30,9 +30,3 @@ Desktop.ini
 .DS_Store*
 ehthumbs.db
 Icon?
-
-# Clear non-build
-config
-src
-.eslint.js
-package-lock.json
